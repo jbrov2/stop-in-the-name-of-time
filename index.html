@@ -11,15 +11,46 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Game time-->
+    <div class="container">
+      <div class="header">
+        <div class="score">
+          <div class="score-header">Score</div>
+          <div class="total-score">0</div>
+        </div>
+        <div class="timer">
+          <div class="timer-header">Timer</div>
+          <div class="time-left"><span class="time-secs">60</span></div>
+        </div>
+
+        <div class="pause">
+          <div class="pause-header">Pause</div>
+          <div class="pause-button">
+            <button type="button" class="pause-btn">Pause</button>
+          </div>
+        </div>
+      </div>
+      <div class="quotes">
+        <p>quotes go here</p>
+      </div>
+      <div class="type-here"><p>Hurry and type here</p></div>
+      <textarea
+        name="input-area"
+        placeholder="type here"
+        oninput="processText()"
+        onfocus="startGame()"
+        rows="1"
+      >
+      </textarea>
+    </div>
     <!-- Make the splash screen -->
-    <div class="splash">
+    <!-- <div class="splash">
       <h1 class="home-text">
         <span class="logo">STOP IN THE NAME OF TIME</span>
-        <button class="start-button" type="button">PLAY</button>
       </h1>
-    </div>
+      <button class="start-button" type="button">PLAY</button>
+    </div> -->
     <!-- End of splash screen -->
-    <div class="container"></div>
   </body>
   <script src="index.js"></script>
 </html>
