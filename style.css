@@ -105,3 +105,12 @@ textarea{
     font-size: 18px;
     font-family: 'Press Start 2P', cursive;
 }
+
+.correctChar{
+    color: #465775;
+}
+
+.incorrectChar{
+    color: red;
+    text-decoration: dotted;
+}
