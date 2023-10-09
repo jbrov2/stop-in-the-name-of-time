@@ -97,7 +97,7 @@ p{
     background-color: #56e39f;
 }
 
-textarea{
+.input-area{
     width: 60%;
     margin: 24px;
     border-radius: 16px;
