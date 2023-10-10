@@ -1,219 +1,14 @@
-// //time limit
+//SHoutout to Sayantanm19 for the guidance on how to code a speed type game
+//
 
-
-// //list of quotes
-// var quotes = [
-//     "TENGEN TOPPA GURREN LAGANN!",
-//     'Who the hell do you think I am',
-//     'Believe IT!',
-//     'Uno, Dos, Tres',
-//     'Started from the bottom now we here',
-//     'And this is to go even further beyond',
-//     "If you don't like your destiny, don't accept it",
-//     "I'll leave tomorrow's problem's to tommorow's me",
-//     "Reject common sense to make the impossible possible",
-//     "Stop caring about what your surronding thinks of you",
-//     "Don't stop believing",
-//     "Every journey begins with a single step. We just have to have patience.",
-//     'It is at the moment of death that humanity has value'
-// ]
-
-// //make the stopwatch work
-
-
-// //turn this into a function
-// // let progress = setInterval(()=>{
-// //     time--;
-    
-// //     timeLeft.textContent = `{time}s`;
-// //     timerBar.style.background = `conic-gradient(#EF6F6C ${time * 3.6}deg, #56E39F 0deg);`
-// //     if(time == timeEnd){
-// //         clearInterval(progress);
-// //         timeLeft.textContent = `Time's UP`;
-// //     }
-// //     console.log(time)
-// // }, speed);
-//     var timerBar = document.querySelector('.time-left');
-//     let timeLeft = document.querySelector('.time-secs');
-
-//     let time = 60;  
-//     let timeEnd = 0;
-//     let speed = 1000;
-
-
-
-// function startTimer(){
-
-
-//     let progress = setInterval(() => {
-//         time--;
-//         timeLeft.textContent = `${time}s`; 
-//         timerBar.style.background = `conic-gradient(#EF6F6C ${time * 6.0}deg, #56E39F 0deg)`;
-
-//         if (time === timeEnd) {
-//             clearInterval(progress);
-//             timeLeft.textContent = `Time's UP`;
-//             finishGame();
-//         }
-
-//         console.log(time);
-//     }, speed);
-// }
-
-// function resetTimer(){
-//     time;
-//     timeLeft.textContent = `${time}s`; 
-//     timerBar.style.background = `conic-gradient(#EF6F6C ${time * 6.0}deg, #56E39F 0deg)`;
-
-// }
-
-// //establish the variables
-// let inputArea = document.querySelector('.input-area');
-// let score = document.querySelector('.total-score');
-// let pauseButton = document.querySelector('.pause-btn');
-// let quoteArea = document.querySelector('.quotePlace');
-// let currentQuote = "";
-// let errors = 0;
-// let totalErrors = 0;
-// let quoteNo = 0;
-// let characterTyped = 0;
-// let correct = 0;
-
-// quoteArea.textContent = null;
-
-// function updateQuote() {
-    
-//     currentQuote = quotes[quoteNo];
-
-//     //clear any existing spans
-//     quoteArea.innerHTML ='';
-
-//     //separate each character and make an element
-//     // out of each of them to individually style them
-
-//     currentQuote.split('').forEach(char => {
-//         const charSpan = document.createElement('span')
-//         charSpan.innerText = char
-//         quoteArea.appendChild(charSpan)
-//     })
-
-//     //roll over to the first quote
-//     if (quoteNo < quotes.length -1){
-//         quoteNo++;
-//     } else {
-//         quoteNo =0;
-//     }
-
-// }
-
-// //We want to get the current value of the input box - split it into an
-// // array then store it.
-
-// //Moving to the next quote
-// //When the length of input text matches the quote text length.
-
-
-// function processText() {
-//     //get current input text and split it
-//     currInput = inputArea.value;
-//     currInputArray = currInput.split('');
-
-//     //increment total characters typed
-//     characterTyped++;
-//     let errors = 0;
-//     let correct = 0;
-
-//     quoteSpanArray = quoteArea.querySelectorAll('span');
-//     quoteSpanArray.forEach((char, index) => {
-//         let typedChar = currInputArray[index]
-
-//         //character not currently typed
-//         if (typedChar == null){
-//             char.classList.remove('correctChar');
-//             char.classList.remove('incorrectChar');
-//         } else if (typedChar === char.innerText){
-//             //correct character
-//             char.classList.add('correctChar');
-//             char.classList.remove('incorrectChar');
-
-//             correct++;
-            
-//         } else {
-//             //incorrect character
-//             char.classList.add('incorrectChar');
-//             char.classList.remove('correctChar');
-
-//             errors++;
-            
-            
-//         }
-//     });
-
-//     //calculating score
-//     let addScore = correct * 5 
-//     let minusScore = errors *3
-    
-//     let newScore = addScore - minusScore;
-//     score.textContent = newScore;
-
-//     //if current text is completely typed
-//     if(currInput.length == currentQuote.length){
-//         updateQuote();
-
-//         //ckear the input area
-//         inputArea.value = "";
-//     }
-
-// }
-
-// function startGame(){
-//     updateQuote();
-//     resetValues();
-    
-
-//     //clear old and start a new timer
-//     resetTimer();
-//     startTimer();
-    
-// }
-
-
-// function resetValues(){
-//     errors = 0;
-//     correct = 0;
-//     quoteNo = 0;
-//     characterTyped = 0;
-//     // inputArea.disabled = true;
-
-//     // inputArea.value = "";
-//     // quoteArea.textContent = 'Click on the area below to start the game.';
-// }
-
-// function finishGame(){
-//     //tell them game over
-//     time;
-//     timeLeft.textContent = 'GAME OVER'; 
-//     timerBar.style.background = `conic-gradient(#EF6F6C ${time * 6.0}deg, #56E39F 0deg)`;
-
-//     //disable the input area
-//     inputArea.disabled = true;
-//     //show finish text
-//     quoteArea.textContent = 'Select Reset from the pause menu.'
-
-// }
-
-// inputArea.addEventListener('click', startGame);
-// inputArea.addEventListener('input', processText);
-
-
-
-//FIXED CODE CHATGPT
+//FIXED EDITED CODE
 
 // Define your variables
 var timerBar = document.querySelector('.time-left');
 var timeLeft = document.querySelector('.time-secs');
 var time = 60;
 var timeEnd = 0;
+// var currentTime = 0;
 var speed = 1000;
 var inputArea = document.querySelector('.input-area'); // Corrected class name
 var score = document.querySelector('.total-score');
@@ -224,6 +19,15 @@ var quoteNo = 0;
 var characterTyped = 0;
 var correct = 0;
 let totalScore =0;
+var progress;
+var isPaused = false;
+var timeIncrease = 0;
+var pauseButton = document.querySelector('.pause-btn'); 
+const pauseMenu = document.querySelector('#pause-menu');
+const startButton = document.querySelector('#start-button');
+const resetButton = document.querySelector('#restart-button');
+var splashButton = document.querySelector(".splashButton");
+var splashScreen = document.querySelector(".splash");
 
 // Define your quotes
 var quotes = [
@@ -242,17 +46,20 @@ var quotes = [
     'It is at the moment of death that humanity has value'
 ];
 
+
 // Initialize the quote area
 quoteArea.textContent = 'Click on the area below to start the game.';
 
 // Start the game function
 function startGame() {
+    shuffleArray(quotes);
+    quoteNo =0;
     updateQuote();
     resetValues();
     resetTimer();
     startTimer();
     inputArea.disabled = false;
-    inputArea.focus();
+    // inputArea.focus();
 }
 
 // Reset game values
@@ -268,11 +75,18 @@ function resetValues() {
 function updateQuote() {
     currentQuote = quotes[quoteNo];
     quoteArea.textContent = currentQuote;
+    if(currentQuote == quotes[12]){
+        clearInterval(progress);
+        quoteArea.textContent = 'YOU WIN!!! CONGRATS';
+        inputArea.disabled = false;
+
+    }
 }
 
 // Start the timer
 function startTimer() {
-    let progress = setInterval(() => {
+    if(!isPaused) {
+       progress = setInterval(() => {
         time--;
         timeLeft.textContent = `${time}s`;
         timerBar.style.background = `conic-gradient(#EF6F6C ${time * 6.0}deg, #56E39F 0deg)`;
@@ -282,7 +96,12 @@ function startTimer() {
             timeLeft.textContent = `Time's UP`;
             finishGame();
         }
-    }, speed);
+
+        
+    }, speed); 
+    }
+
+    
 }
 
 // Reset the timer
@@ -291,6 +110,11 @@ function resetTimer() {
     timeLeft.textContent = `${time}s`;
     timerBar.style.background = `conic-gradient(#EF6F6C ${time * 6.0}deg, #56E39F 0deg)`;
 }
+
+//stop timer
+// function stopTimer(){
+    
+// }
 
 // Finish the game
 function finishGame() {
@@ -317,31 +141,108 @@ function processText() {
         }
     }
 
+    if (currInput.length === currentQuote.length) {
+        if (errors === 0) {
+            // Advance to the next quote
+            if (quoteNo < quotes.length - 1) {
+                quoteNo++;
+            } else {
+                quoteNo = 0;
+            }
+            updateQuote();
+        }
+        inputArea.value = "";
+    }
+
     let addScore = correct * 5;
-    let minusScore = errors * 3;
+    let minusScore = errors * 6;
     let newScore = addScore - minusScore;
 
     totalScore += newScore;
     score.textContent = totalScore;
 
-    if (currInput.length === currentQuote.length) {
-        //Checking if it's the last quote in the array
-        if(quoteNo < quotes.length - 1){
-            quoteNo++;
-            updateQuote();
-            inputArea.value = "";
-        } else {
-            quoteNo;
-            updateQuote();
-            inputArea.value = "";
-        }
-        
+    pointSystem();
+}
+
+function pauseGame(){
+    isPaused = true;
+    clearInterval(progress);
+    pauseMenu.classList.remove('hidden');
+    inputArea.disabled = true;
+    
+}
+
+function resumeGame(){
+    isPaused = false;
+    pauseMenu.classList.add('hidden');
+    inputArea.disabled = false;
+    startTimer();
+}
+
+function shuffleArray(quotes){
+    for(let i = quotes.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random()* (i + 1));
+        const temp = quotes[i];
+        quotes[i] = quotes[j];
+        quotes[j] = temp;
     }
 }
 
+function pointSystem(){
+    var scoreThousandths = Math.floor(totalScore/10000);
+
+    //calculate the additional time to add based on the number of 10k
+    var additionalTime = scoreThousandths * 15;
+
+    //check if time should be added
+    if (additionalTime > timeIncrease){
+        var timeToAdd = (additionalTime - timeIncrease) * 1000;
+
+        //update tune and timeincrease
+
+        time += timeToAdd / 1000;
+        timeIncrease = additionalTime;
+
+        //display time
+
+        timeLeft.textContent = `${time}s`;
+    }
+
+    
+
+}
+
+function restartGame(){
+isPaused = false;
+clearInterval(progress);
+resetTimer();
+inputArea.value = "";
+startGame();
+pauseMenu.classList.add('hidden');
+
+}
+
+
+
+
+//pause menu
+pauseButton.addEventListener('click',pauseGame);
+startButton.addEventListener('click', resumeGame);
+resetButton.addEventListener('click',restartGame)
 // Attach event listeners
 quoteArea.addEventListener('click', startGame);
 inputArea.addEventListener('input', processText);
 
+//splash screen
+
+document.addEventListener("DOMContentLoaded", function() {
+    var splashButton = document.querySelector(".splash-button");
+    var splashScreen = document.querySelector(".splash");
+
+    splashButton.addEventListener("click", function() {
+        splashScreen.style.display = "none";
+        startGame();
+    });
+});
 // Start the game initially
-startGame();
+
