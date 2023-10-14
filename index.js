@@ -1,9 +1,8 @@
 //SHoutout to Sayantanm19 for the guidance on how to code a speed type game
 //
-
+//ChatGPT helped me debug and verify if there was any glaring issues in my code.
 //FIXED EDITED CODE
 
-// Define your variables
 var timerBar = document.querySelector('.time-left');
 var timeLeft = document.querySelector('.time-secs');
 var time = 60;
@@ -234,7 +233,7 @@ quoteArea.addEventListener('click', startGame);
 inputArea.addEventListener('input', processText);
 
 //splash screen
-
+//Chat GPT Helped with this part, the DOMCONTENTLOADED
 document.addEventListener("DOMContentLoaded", function() {
     var splashButton = document.querySelector(".splash-button");
     var splashScreen = document.querySelector(".splash");
